@@ -40,12 +40,12 @@
 
 
 #define TOOL_NUM     1    // set in 1~6
-#define EXTRUDER_NUM 1    // set in 1~6
+#define EXTRUDER_NUM 2    // set in 1~6
 #define FAN_NUM      1    // set in 1~6
 
 //                       PLA      PETG       ABS
-#define PREHEAT_BED      {60,      70,       100}
-#define PREHEAT_HOTEND   {200,     250,      230}
+#define PREHEAT_BED      {60,      85,       100}
+#define PREHEAT_HOTEND   {200,     245,      230}
 #define PREHEAT_TEXT     {"PLA",  "PETG",   "ABS"}
 
 #define HEAT_MAX_TEMP    {150,    275,       275,       275,       275,       275,       275}    //max temperature can be set
@@ -76,8 +76,8 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 235
-#define Y_MAX_POS 235
+#define X_MAX_POS 250
+#define Y_MAX_POS 250
 #define Z_MAX_POS 250
 
 // Specify a pause position as { X, Y, Z_raise }
@@ -137,7 +137,7 @@
 
 // Enable Unified Move Menu
 // Move, Home, Extrude, ABL at one Place and bring Gcode Menu on Home Menu
-//#define UNIFIED_MENU
+#define UNIFIED_MENU
 
 /**
  * Enable list mode in Files menu and settings menu
@@ -170,7 +170,7 @@
 
 
 // Prevent extrusion if the temperature is below set temperature
-#define PREVENT_COLD_EXTRUSION_MINTEMP 170
+#define PREVENT_COLD_EXTRUSION_MINTEMP 195
 
 /**
   * Maximum hotend temperature of automatic shut down after printing.
@@ -195,8 +195,8 @@
  */
 #define CUSTOM_0_LABEL "Restore EEPROM"
 #define CUSTOM_0_GCODE "M501\n"
-//#define CUSTOM_1_LABEL "Custom2"
-//#define CUSTOM_1_GCODE "M105\n"
+#define CUSTOM_1_LABEL "TMC DEBUG"
+#define CUSTOM_1_GCODE "M122\n"
 //#define CUSTOM_2_LABEL "Custom2"
 //#define CUSTOM_2_GCODE "M105\n"
 //#define CUSTOM_3_LABEL "Custom3"
